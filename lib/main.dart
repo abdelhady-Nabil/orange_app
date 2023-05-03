@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:orange_project/screens/login_scrrrn.dart';
 import 'package:orange_project/screens/splash_screen.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }
