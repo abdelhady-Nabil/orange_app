@@ -16,12 +16,11 @@ class CustomFormField extends StatelessWidget {
           color: Colors.white,
         ),),
         const SizedBox(
-          height: 16,
+          height: 8,
         ),
         Container(
           decoration: BoxDecoration(
               color: thirdColor,
-
               borderRadius: BorderRadius.circular(10)
           ),
           child: Padding(
