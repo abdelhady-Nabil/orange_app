@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:orange_project/view/auth/register_screen.dart';
 
-import '../constant/constant.dart';
-import '../widget/custom_button.dart';
-import '../widget/custom_form_field.dart';
+import '../../constant/constant.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -42,14 +45,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const CustomFormField(
+                     CustomFormField(
+
                       title: 'Email',
                       hint: 'example@gmail.com',
                     ),
                     const SizedBox(
                       height: 12,
                     ),
-                    const CustomFormField(
+                     CustomFormField(
                       title: 'password',
                       hint: '**********',
                     ),
@@ -65,11 +69,11 @@ class _LoginScreenState extends State<LoginScreen> {
                               value: isChecked,
                               fillColor: MaterialStateColor.resolveWith((states) => secondColor),
                               onChanged: (value){
-                            setState(() {
-                              isChecked=value!;
-                            });
+                                setState(() {
+                                  isChecked=value!;
+                                });
 
-                          }),
+                              }),
                           const Text('Remember me',style: TextStyle(
                             fontSize: 15,
                             color: Colors.white,
@@ -135,12 +139,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children:  [
-                           Container(
-                             width: 22,
-                             height: 22,
-                             child: Image.asset('assets/images/google.png'),
+                            Container(
+                              width: 22,
+                              height: 22,
+                              child: Image.asset('assets/images/google.png'),
 
-                           ),
+                            ),
                             const SizedBox(
                               width: 10,
                             ),
@@ -156,9 +160,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children:  [
                         const Text('Not register yet?',style: TextStyle(
-                          color: Colors.white
+                            color: Colors.white
                         ),),
-                        TextButton(onPressed: (){}, child: const Text('Create an Account',style: TextStyle(color: secondColor),))
+                        TextButton(onPressed: (){
+                          Get.to(RegisterScreen());
+                        }, child: const Text('Create an Account',style: TextStyle(color: secondColor),))
                       ],
                     ),
 

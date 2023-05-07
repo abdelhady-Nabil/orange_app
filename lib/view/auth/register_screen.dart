@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../constant/constant.dart';
-import '../widget/custom_button.dart';
-import '../widget/custom_form_field.dart';
+import '../../constant/constant.dart';
+import '../../widget/custom_button.dart';
+import '../../widget/custom_form_field.dart';
+
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
@@ -39,28 +40,28 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const CustomFormField(
+                     CustomFormField(
                       title: 'Name',
                       hint: 'full nam',
                     ),
                     const SizedBox(
                       height: 12,
                     ),
-                    const CustomFormField(
+                     CustomFormField(
                       title: 'Email',
                       hint: 'example@gmail.com',
                     ),
                     const SizedBox(
                       height: 12,
                     ),
-                    const CustomFormField(
+                     CustomFormField(
                       title: 'password',
                       hint: '**********',
                     ),
                     const SizedBox(
                       height: 12,
                     ),
-                    const CustomFormField(
+                     CustomFormField(
                       title: 'Confirm password',
                       hint: '**********',
                     ),

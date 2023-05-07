@@ -23,14 +23,14 @@ class SplashScreen extends StatelessWidget {
                   height: 49,
                   decoration: BoxDecoration(
                       color: primaryColor,
-                    borderRadius: BorderRadius.circular(14)
+                      borderRadius: BorderRadius.circular(14)
                   ),
 
                   child:  const Center(
                     child: Text('T',style: TextStyle(
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black
                     ),),
                   ),
                 ),
@@ -39,13 +39,13 @@ class SplashScreen extends StatelessWidget {
                 ),
                 const Text('ap Cash',style: TextStyle(
                     color: Colors.white,
-                  fontSize: 30
+                    fontSize: 30
                 ),),
               ],
             ),
           ),
         ],
-        
+
       ),
     );
   }
