@@ -7,7 +7,7 @@ class CustomText extends StatelessWidget {
 
  CustomText({
    required this.title,
-    this.color=secondColor, //initialize color default
+    this.color=Colors.white, //initialize color default
    required this.fontSize
 });
   @override

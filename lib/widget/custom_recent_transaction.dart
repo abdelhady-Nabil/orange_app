@@ -12,7 +12,7 @@ class CustomRecentTransaction extends StatelessWidget {
     required this.image,
     required this.name,
     required this.time,
-    required this.price
+     required this.price
   });
 
   @override
@@ -34,6 +34,9 @@ class CustomRecentTransaction extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CustomText(title: name, fontSize: 15 , color: Colors.white,),
+                SizedBox(
+                  height: 10,
+                ),
                 CustomText(title: time, fontSize: 10,color: hintFormColor,)
               ],
             ),

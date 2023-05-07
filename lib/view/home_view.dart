@@ -1,9 +1,13 @@
 import 'package:d_chart/d_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:orange_project/view/bill_view.dart';
 import '../constant/constant.dart';
 import '../widget/custom_item_list.dart';
 import '../widget/custom_recent_transaction.dart';
 import '../widget/custom_text.dart';
+import 'notificatiom_view.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -76,7 +80,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
 
-                        Icon(Icons.add_alert_outlined,color: Colors.white,),
+                        IconButton(
+                            icon: Icon(Icons.add_alert_outlined,color: Colors.white,),
+                            onPressed: (){
+                              Get.to(NotificationView());
+                            },
+                        ),
                       ],
                     ),
                     const SizedBox(
@@ -225,18 +234,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomItemList(
+                        function: (){
+                          Get.to(BillView(title:'Electricty' ,));
+                        },
                         title: 'Electricty',
                         icon: Icons.electric_bolt_outlined,
                       ),
                       CustomItemList(
+                        function: (){
+                          Get.to(BillView(title: 'internet',));
+                        },
                         title: 'internet',
                         icon: Icons.wifi,
                       ),
                       CustomItemList(
+                        function: (){
+                          Get.to(BillView(title:'Water',));
+                        },
                         title: 'Water',
                         icon: Icons.water_drop_rounded,
                       ),
                       CustomItemList(
+                        function: (){
+                          Get.to(BillView(title:'transfer' ,));
+                        },
                         title: 'transfer',
                         icon: Icons.compare_arrows_outlined,
                       ),
@@ -249,18 +270,30 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomItemList(
+                        function: (){
+                          Get.to(BillView(title:'Merchant' ,));
+                        },
                         title: 'Merchant',
                         icon: Icons.shopping_cart,
                       ),
                       CustomItemList(
+                        function: (){
+                          Get.to(BillView(title:'Mobile Credit' ,));
+                        },
                         title: 'Mobile\n Credit',
                         icon: Icons.phone_iphone_outlined,
                       ),
                       CustomItemList(
+                        function: (){
+                          Get.to(BillView(title:'Bill' ,));
+                        },
                         title: 'Bill',
                         icon: Icons.receipt_long_outlined,
                       ),
                       CustomItemList(
+                        function: (){
+                          Get.to(BillView(title: 'more',));
+                        },
                         title: 'more',
                         icon: Icons.more_vert_rounded,
                       ),
