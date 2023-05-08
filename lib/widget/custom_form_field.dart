@@ -5,10 +5,13 @@ class CustomFormField extends StatelessWidget {
 
   final String title ;
   final String hint;
+   var controller;
+   var saved;
 
 
 
-   CustomFormField({required this.title,required this.hint,});
+
+   CustomFormField({required this.title,required this.hint,this.controller,this.saved});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,6 +32,8 @@ class CustomFormField extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(left: 20),
             child: TextFormField(
+              controller: controller,
+              onSaved:saved,
 
               decoration: InputDecoration(
                   hintText: hint,

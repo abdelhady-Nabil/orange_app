@@ -4,6 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:orange_project/view/auth/register_screen.dart';
 
 import '../../constant/constant.dart';
+import '../../view_model/auth_view_model.dart';
 import '../../widget/custom_button.dart';
 import '../../widget/custom_form_field.dart';
 
@@ -18,6 +19,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool isChecked = false;
+  var email = TextEditingController();
+  var password =TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,6 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    // Login
                     const Center(
                       child:  Text('Login',style: TextStyle(
                           fontSize: 30,
@@ -45,10 +49,16 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 20,
                     ),
+
+
                      CustomFormField(
 
                       title: 'Email',
                       hint: 'example@gmail.com',
+                       controller: email,
+                       saved: (value){
+                        print('value');
+                       },
                     ),
                     const SizedBox(
                       height: 12,
@@ -56,6 +66,10 @@ class _LoginScreenState extends State<LoginScreen> {
                      CustomFormField(
                       title: 'password',
                       hint: '**********',
+                       controller: password,
+                       saved: (value){
+                         print('value');
+                       },
                     ),
 
                     const SizedBox(
@@ -87,6 +101,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     CustomButton(
                       title: 'login',
+                      function: (){
+                        print(email);
+                        print(password);
+                        print('hello');
+                        signIn();
+                        print('hello22');
+                      },
                     ),
                     const SizedBox(
                       height: 8,

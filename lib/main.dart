@@ -4,6 +4,7 @@ import 'package:orange_project/view/auth/login_screen.dart';
 import 'package:orange_project/view/bill_view.dart';
 import 'package:orange_project/view/home_view.dart';
 import 'package:orange_project/view/layout_view.dart';
+import 'package:orange_project/view/splash_view.dart';
 
 
 void main() {
@@ -22,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LayoutView(),
+      home: SplashScreen(),
     );
   }
 }

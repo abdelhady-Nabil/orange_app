@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import '../constant/constant.dart';
 class CustomButton extends StatelessWidget {
   final String title;
+  var function;
   CustomButton({
-    required this.title
+    required this.title,
+    this.function
 });
 
   @override
@@ -18,7 +20,7 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(10)
       ),
       child: TextButton(
-        onPressed: (){},
+        onPressed: function,
         child:  Text(title,style: const TextStyle(
           color: Colors.white,
         ),),

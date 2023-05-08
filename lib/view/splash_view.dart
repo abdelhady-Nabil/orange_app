@@ -1,11 +1,31 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:orange_project/view/auth/login_screen.dart';
 
 import '../constant/constant.dart';
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
+    Timer(
+      Duration(seconds: 4),
+        ()=>Get.to(LoginScreen()),
+    );
     return Scaffold(
       body:Stack(
         children: [
@@ -22,7 +42,7 @@ class SplashScreen extends StatelessWidget {
                   width: 46,
                   height: 49,
                   decoration: BoxDecoration(
-                      color: primaryColor,
+                      color: secondColor,
                       borderRadius: BorderRadius.circular(14)
                   ),
 

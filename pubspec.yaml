@@ -39,6 +39,7 @@ dependencies:
   get: ^4.6.5
   fl_chart: 0.62.0
   d_chart: ^2.2.11
+  dio: ^5.1.1
 
 
 

@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:orange_project/view/home_view.dart';
 
 import '../../constant/constant.dart';
 import '../../widget/custom_button.dart';
@@ -105,7 +108,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         const Text('Do you have an account?',style: TextStyle(
                             color: Colors.white
                         ),),
-                        TextButton(onPressed: (){}, child: const Text('Sign in now',style: TextStyle(color: secondColor),))
+                        TextButton(onPressed: (){
+                          Get.to(HomeScreen());
+                        },
+                        child: const Text('Sign in now',style: TextStyle(color: secondColor),))
                       ],
                     ),
 
